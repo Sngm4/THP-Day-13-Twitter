@@ -15,12 +15,7 @@ def login_twitter()
     config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
   end
   return client
+  client.update('Mon premier tweet en Ruby !!!!')
 end
 
-# The Tweet !
-def the_tweet(login_twitter)
-  client = client.update('Mon premier tweet en Ruby !!!!')
-  return client
-end
-
-the_tweet(login_twitter)
+login_twitter
